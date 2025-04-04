@@ -75,6 +75,9 @@ class Gaussian(Radial):
         guess = np.sqrt(guess / (len(self.data)-1))
         self.bandwidth = guess * ((self.d + 2)*len(self.data)/4)**(-1/(self.d + 4))
 
+    def guess_bandwidth_challenge(self: Self)-> None:
+        pass
+
 class Knn(Kernel):
     """A class for kernel density estimation with k-Nearest Neighbors
        derived from Kernel
